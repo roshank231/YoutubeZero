@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YouTube ~0 Views Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="brand">YT Recycle Bin Finder</div>
+      <div>
+        <div class="title">Find YouTube videos with ~0 views</div>
+        <div class="subtitle">Randomized templates from the community map.</div>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="controls">
+        <!-- (Actions & Settings) -->
+        <div>
+          <div class="card" style="width:100%;min-height:320px">
+            <h3 style="margin:0 0 12px 0">How to Use</h3>
+            <div class="small" style="line-height: 1.5;">
+              <strong>1. Find a Template (Right Panel):</strong><br>
+              Start on the right side. You can filter by category (All, New, Old), use the subcategory chips, or search for a template by name.
+              <br><br>
+              <strong>2. Generate a Search:</strong><br>
+              Click "Pick" on any template to see a preview. The main "Find Random Videos" button will use your selected template. If no template is picked, it will choose one for you based on your filters.
+              <br><br>
+              <strong>3. Customize (Optional):</strong><br>
+              Use the toggles below to control variable randomization and sorting. Turn off randomization to enter your own values (like a specific date) in the "Variable / Overrides" box on the right.
+            </div>
+          </div>
+
+          <div style="height:12px"></div>
+          <div class="card small">
+            <strong>Tips</strong>
+            <ul>
+              <li>The "Find Random Videos" button works even without a template selected—it will pick one for you.</li>
+              <li>To enter your own values (e.g., a specific date), turn off the "Randomize variables" toggle below.</li>
+              <li>Use the "Copy Search URL" button to share a specific search query with others.</li>
+              <li>Your last 10 searches are saved in the "History" section for quick access.</li>
+            </ul>
+          </div>
+
+          <div class="actions" style="margin-top: 16px;">
+            <button class="btn primary" id="btnSearch">Find Random Videos</button>
+            <button class="btn ghost" id="btnCopy">Copy Search URL</button>
+          </div>
+          
+          <div class="relocated-toggles">
+              <div>
+                  <label>Randomize variables</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="randomVarsToggle" checked>
+                    <span class="slider"></span>
+                  </label>
+              </div>
+              <div>
+                  <label>Sort by Upload Date</label>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="sortToggle" checked>
+                    <span class="slider"></span>
+                  </label>
+              </div>
+          </div>
+        </div>
+
+        <!-- (Template Selection & Preview) -->
+        <div class="left" style="padding-left:12px">
+          <div class="tabs" role="tablist">
+            <div class="tab active" data-cat="all">All Videos</div>
+            <div class="tab" data-cat="new">New Videos</div>
+            <div class="tab" data-cat="old">Old & Forgotten</div>
+          </div>
+
+          <div class="row">
+            <div style="flex:1">
+              <label>Subcategory</label>
+              <div class="subcats" id="subcats"></div>
+              <div class="desc-box" id="descBox">Select a subcategory to see a description.</div>
+            </div>
+          </div>
+          
+          <div class="main-layout-grid">
+            <div class="template-col">
+                <label for="templateSearch">Template</label>
+                <input type="text" id="templateSearch" placeholder="Search templates..." style="margin-bottom: 8px;">
+                <div class="template-list card" id="templateList"></div>
+            </div>
+            <div class="results-col">
+                <div>
+                    <label>Search Preview</label>
+                    <div class="preview card" id="preview">(Generated search will appear here)</div>
+                </div>
+                <div>
+                    <label>Variables / Dates</label>
+                    <div class="card" id="variableArea">
+                      <div class="small">Choose a template or leave "Randomize variables" on to auto-generate.</div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <label>History</label>
+          <div class="history" id="history"></div>
+        </div>
+      </div>
+
+      <footer>
+        <div>Built from the map by KVN AUST & Mika_Virus. Source: <a href="https://x.com/MingKasterMK" target="_blank" rel="noopener">x.com/MingKasterMK</a></div>
+        <div class="small">Made by Roshank</div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="templates.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
