@@ -42,7 +42,7 @@ const TEMPLATES = [
   {id:'WAO', label:'WAOXXXX (misc)', pattern:'WAOXXXX', vars:[{name:'XXXX',type:'digits',len:4}], category:'old', sub:'misc'},
   {id:'MOLOX', label:'MOLOX (old misc)', pattern:'MOLOX', vars:[], category:'old', sub:'misc'},
   {id:'P100', label:'P100XXXX (camera)', pattern:'P100XXXX', vars:[{name:'XXXX',type:'digits',len:4}], category:'old', sub:'camera'},
-  {id:'VTS_OLD', label:'VTS XX / VTS XXX (VHS)', pattern:'VTS XX', vars:[{name:'XX',type:'digits',len:2}], category:'old', sub:'legacy'},
+  {id:'VTS_OLD', label:'VTS XXX (VHS)', pattern:'VTS XXX', vars:[{name:'XXX',type:'digits',len:3}], category:'old', sub:'legacy'},
   {id:'MY_SLIDESHOW', label:'"My Slideshow" / "My Slideshow Video" (Video Editor)', pattern:'My Slideshow Video', vars:[], category:'old', sub:'video_editor'},
   {id:'MY_STUPEFLIX', label:'"My Stupeflix Video" (Video Editor)', pattern:'My Stupeflix Video', vars:[], category:'old', sub:'video_editor'},
   {id:'YMD_OLD', label:'YMD patterns (old)', pattern:'YMD', vars:[{name:'date',type:'date',format:'YYYYMMDD',range:[new Date(2005,0,1), new Date(2018,11,31)]}], category:'old', sub:'misc'},
